@@ -46,6 +46,7 @@ const links = document.querySelectorAll('nav a');
 // Turn links into an array
 const linksArr = Array.from(links);
 
+// Nav
 links.forEach(function(link, index){
   // Add italic class to links
   link.className = 'italic';
@@ -54,9 +55,16 @@ links.forEach(function(link, index){
   console.log(`nav-item-${(index + 1)}`)
 });
 
-linksArr[0].textContent = 'test';
-
 // Header image
 const header = document.querySelector('header');
 const imageLogo = header.querySelector('img');
-imageLogo.src = 'http://localhost:9000/img/logo.png';
+imageLogo.src = siteContent.images['logo-img'];
+
+// Cta
+const h1 = document.querySelector('h1');
+h1.textContent = siteContent.cta.h1;
+h1.nextElementSibling.textContent = siteContent.cta.button;
+const ctaImg = document.querySelector('cta').querySelector('img');
+ctaImg.src = siteContent.images['cta-img'];
+
+// Main-content
