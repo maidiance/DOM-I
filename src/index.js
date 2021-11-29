@@ -68,3 +68,33 @@ const ctaImg = document.querySelector('cta').querySelector('img');
 ctaImg.src = siteContent.images['cta-img'];
 
 // Main-content
+const mainContent = document.querySelector('.main-content');
+const topContent = mainContent.querySelector('.top-content');
+
+// Features
+const features = topContent.querySelector('.text-content:nth-of-type(1)');
+const featuresHeader = features.querySelector('h4');
+featuresHeader.textContent = siteContent['main-content']['features-h4'];
+featuresHeader.nextElementSibling.textContent = siteContent['main-content']['features-content'];
+
+// About
+const about = topContent.querySelector('.text-content:nth-of-type(2)');
+const aboutHeader = about.querySelector('h4');
+aboutHeader.textContent = siteContent['main-content']['about-h4'];
+aboutHeader.nextElementSibling.textContent = siteContent['main-content']['about-content'];
+
+// Middle
+const middle = mainContent.querySelector('#middle-img');
+middle.src = siteContent.images['accent-img'];
+
+// Bottom
+const bottom = mainContent.querySelector('.bottom-content');
+
+// Services
+const services = bottom.querySelector('.text-content:nth-of-type(1)');
+const servicesHeader = services.querySelector('h4');
+const servicesText = services.querySelector('p');
+servicesHeader.textContent = siteContent['main-content']['services-h4'];
+servicesText.textContent = siteContent['main-content']['services-content'];
+
+// Product
