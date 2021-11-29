@@ -33,9 +33,9 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
@@ -52,7 +52,6 @@ links.forEach(function(link, index){
   link.className = 'italic';
   // Update textContent
   linksArr[index].textContent = siteContent.nav[`nav-item-${(index + 1)}`];
-  console.log(`nav-item-${(index + 1)}`)
 });
 
 // Header image
@@ -64,11 +63,13 @@ imageLogo.src = siteContent.images['logo-img'];
 const h1 = document.querySelector('h1');
 h1.textContent = siteContent.cta.h1;
 h1.nextElementSibling.textContent = siteContent.cta.button;
-const ctaImg = document.querySelector('cta').querySelector('img');
+const cta = document.querySelector('.cta');
+const ctaImg = cta.querySelector('#cta-img');
 ctaImg.src = siteContent.images['cta-img'];
 
 // Main-content
 const mainContent = document.querySelector('.main-content');
+console.log(mainContent);
 const topContent = mainContent.querySelector('.top-content');
 
 // Features
