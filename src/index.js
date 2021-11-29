@@ -40,3 +40,4 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+const links = document.querySelectorAll('nav a');
