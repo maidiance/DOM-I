@@ -115,3 +115,14 @@ visionText.textContent = siteContent['main-content']['vision-content'];
 
 // Contact
 const contact = document.querySelector('.contact');
+const contactHeader = contact.querySelector('h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+// Address
+const address = contact.querySelector('p:nth-of-type(1)');
+address.textContent = siteContent['contact']['address'];
+// Phone
+const phone = contact.querySelector('p:nth-of-type(2)');
+phone.textContent = siteContent['contact']['phone'];
+// Email
+const email = contact.querySelector('p:nth-of-type(3)');
+email.textContent = siteContent['contact']['email'];
