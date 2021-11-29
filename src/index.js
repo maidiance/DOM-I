@@ -126,3 +126,8 @@ phone.textContent = siteContent['contact']['phone'];
 // Email
 const email = contact.querySelector('p:nth-of-type(3)');
 email.textContent = siteContent['contact']['email'];
+
+// Footer
+const footer = document.querySelector('footer');
+footer.classList.add('bold');
+footer.querySelector('a').textContent = siteContent['footer']['copyright'];
