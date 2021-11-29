@@ -69,20 +69,21 @@ ctaImg.src = siteContent.images['cta-img'];
 
 // Main-content
 const mainContent = document.querySelector('.main-content');
-console.log(mainContent);
 const topContent = mainContent.querySelector('.top-content');
 
 // Features
 const features = topContent.querySelector('.text-content:nth-of-type(1)');
 const featuresHeader = features.querySelector('h4');
+const featuresText = features.querySelector('p');
 featuresHeader.textContent = siteContent['main-content']['features-h4'];
-featuresHeader.nextElementSibling.textContent = siteContent['main-content']['features-content'];
+featuresText.textContent = siteContent['main-content']['features-content'];
 
 // About
 const about = topContent.querySelector('.text-content:nth-of-type(2)');
 const aboutHeader = about.querySelector('h4');
+const aboutText = about.querySelector('p');
 aboutHeader.textContent = siteContent['main-content']['about-h4'];
-aboutHeader.nextElementSibling.textContent = siteContent['main-content']['about-content'];
+aboutText.textContent = siteContent['main-content']['about-content'];
 
 // Middle
 const middle = mainContent.querySelector('#middle-img');
@@ -99,3 +100,18 @@ servicesHeader.textContent = siteContent['main-content']['services-h4'];
 servicesText.textContent = siteContent['main-content']['services-content'];
 
 // Product
+const product = bottom.querySelector('.text-content:nth-of-type(2)');
+const productHeader = product.querySelector('h4');
+const productText = product.querySelector('p');
+productHeader.textContent = siteContent['main-content']['product-h4'];
+productText.textContent = siteContent['main-content']['product-content'];
+
+// Vision
+const vision = bottom.querySelector('.text-content:nth-of-type(3)');
+const visionHeader = vision.querySelector('h4');
+const visionText = vision.querySelector('p');
+visionHeader.textContent = siteContent['main-content']['vision-h4'];
+visionText.textContent = siteContent['main-content']['vision-content'];
+
+// Contact
+const contact = document.querySelector('.contact');
