@@ -40,4 +40,23 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// Links
 const links = document.querySelectorAll('nav a');
+// Turn links into an array
+const linksArr = Array.from(links);
+
+links.forEach(function(link, index){
+  // Add italic class to links
+  link.className = 'italic';
+  // Update textContent
+  linksArr[index].textContent = siteContent.nav[`nav-item-${(index + 1)}`];
+  console.log(`nav-item-${(index + 1)}`)
+});
+
+linksArr[0].textContent = 'test';
+
+// Header image
+const header = document.querySelector('header');
+const imageLogo = header.querySelector('img');
+imageLogo.src = 'http://localhost:9000/img/logo.png';
